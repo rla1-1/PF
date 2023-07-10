@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "NotoSansRegular";
+}
+
+html,
+body {
+  width: 100%;
+  word-break: keep-all;
+}
+
+body {
+  min-width: 360px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
