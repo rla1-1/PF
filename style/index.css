@@ -1,13 +1,14 @@
 header {
     position: fixed;
-    width: calc(100vw - 15px);
+    min-width: 360px;
+    width: 100vw;
     height: 60px;
     background: #fcfcfc;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 10px;
     border-bottom: 1px solid rgba(100, 100, 100, .2);
     z-index: 100;
 }
@@ -21,7 +22,7 @@ header .main-logo {
 header .main-nav ul {
     display: flex;
     flex-direction: row;
-    column-gap: 30px;
+    /* column-gap: 30px; */
 }
 
 header .main-nav ul li a {
@@ -168,7 +169,6 @@ header .main-nav ul li a.active {
     width: 80%;
     height: 100vh;
     min-height: 450px;
-    overflow: hidden;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -236,7 +236,7 @@ header .main-nav ul li a.active {
 
 #section1 .title .third {
     position: relative;
-    left: 80px;
+    left: 50px;
     display: flex;
     flex-direction: row;
     opacity: 0;
@@ -255,7 +255,7 @@ header .main-nav ul li a.active {
 
 #section1 .title p {
     font-family: 'Gaegu', cursive;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 @keyframes subTitle {
@@ -596,22 +596,25 @@ header .main-nav ul li a.active {
 
 #section2 {
     position: relative;
-    width: calc(100vw - 15px);
-    height: 600px;
-    margin-bottom: 150px;
+    width: 100vw;
+    height: atuo;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bg-gradient-top {
     position: absolute;
-    top: 0;
     width: 600px;
     height: 600px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(191, 189, 190, .7) 0%, rgba(255, 255, 255, .7) 63%);
-    z-index: 0;
+
 }
 
 .bg-gradient-bottom {
+    display: none;
     position: absolute;
     top: 20%;
     right: 0;
@@ -619,13 +622,20 @@ header .main-nav ul li a.active {
     height: 600px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(219, 203, 148, .7) 0%, rgba(255, 255, 255, .7) 63%);
-    z-index: 0;
 }
 
 .section__inner {
-    width: 1220px;
+    width: 100%;
     height: 100%;
-    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section2 .section__inner {
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -639,7 +649,7 @@ header .main-nav ul li a.active {
     align-items: center;
     z-index: 50;
     width: 100%;
-    height: 150px;
+    height: 100px;
 }
 
 .section__title h2 {
@@ -699,16 +709,16 @@ header .main-nav ul li a.active {
     transition: 1s;
 }
 
-.section__content.showUp .skills__item:nth-child(2) {
-    transition-delay: .3s;
+.section__content.showUp .skills__item-box:first-child .skills__item:last-child {
+    transition-delay: .5s;
 }
 
-.section__content.showUp .skills__item:nth-child(3) {
-    transition-delay: .6s;
+.section__content.showUp .skills__item-box:last-child .skills__item:first-child {
+    transition-delay: 1s;
 }
 
-.section__content.showUp .skills__item:nth-child(4) {
-    transition-delay: .9s;
+.section__content.showUp .skills__item-box:last-child .skills__item:last-child {
+    transition-delay: 1.5s;
 }
 
 .section__content.showUp.active .skills__item {
@@ -724,14 +734,24 @@ header .main-nav ul li a.active {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    row-gap: 30px;
+    flex-wrap: wrap;
     padding-bottom: 50px;
+}
+
+.skills__item-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    column-gap: 30px;
 }
 
 .section__content .skills__item {
     position: relative;
-    width: 200px;
-    height: 300px;
-    padding: 30px 20px;
+    width: 160px;
+    height: 230px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -745,15 +765,14 @@ header .main-nav ul li a.active {
 }
 
 .section__content .skills__item i {
-    font-size: 4rem;
+    font-size: 2.6rem;
     color: #1d3557;
 }
 
 .section__content .skills__item h3 {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #3889bb;
-    padding: 5px 0;
 }
 
 .section__content .skills__item div {
@@ -773,9 +792,8 @@ header .main-nav ul li a.active {
 }
 
 #section3 {
-    width: calc(100vw - 15px);
+    width: 100vw;
     height: 500px;
-    background: #eee;
 }
 
 #section3 .section__title,
@@ -786,14 +804,14 @@ header .main-nav ul li a.active {
 
 #section3 .section__inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.clone-box {
+#section3 .clone-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .clone-image {
@@ -802,8 +820,8 @@ header .main-nav ul li a.active {
 }
 
 #section3 .clone-image .mac {
-    width: 400px;
-    height: 333px;
+    width: 200px;
+    height: 167px;
     background-image: url("../images/spritemac.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -812,16 +830,16 @@ header .main-nav ul li a.active {
 
 @keyframes spritmac {
     100% {
-        background-position: -2005px;
+        background-position: -1005px;
     }
 }
 
 #section3 .clone-image .mobile {
     position: relative;
-    top: 70px;
-    left: -55px;
-    width: 120px;
-    height: 240px;
+    top: 15px;
+    left: -25px;
+    width: 80px;
+    height: 160px;
     background-image: url("../images/mobile2.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -845,6 +863,7 @@ header .main-nav ul li a.active {
     align-items: center;
     justify-content: center;
     row-gap: 20px;
+    margin-top: 50px;
 }
 
 .clone-link a {
@@ -864,14 +883,14 @@ header .main-nav ul li a.active {
 }
 
 #section4 {
-    width: calc(100vw - 15px);
+    width: 100vw;
     height: 500px;
     background: #eee;
 }
 
 #section4 .section__inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: flex-end;
     align-items: center;
 }
@@ -887,9 +906,14 @@ header .main-nav ul li a.active {
     transform: translateX(0);
 }
 
+#section4 .clone-box {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 #section4 .clone-image .mac {
-    width: 400px;
-    height: 333px;
+    width: 200px;
+    height: 167px;
     background-image: url("../images/yalespritemac.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -898,20 +922,19 @@ header .main-nav ul li a.active {
 
 #section4 .clone-image .mobile {
     position: relative;
-    top: 70px;
-    left: 55px;
-    width: 120px;
-    height: 240px;
+    top: 15px;
+    left: 25px;
+    width: 80px;
+    height: 160px;
     background-image: url("../images/yalespritemobile.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #section5 {
-    width: calc(100vw - 15px);
+    width: 100vw;
     height: auto;
     background: white;
-    overflow: hidden;
 }
 
 #section5 .section__inner {
@@ -923,7 +946,32 @@ header .main-nav ul li a.active {
 
 #section5 .section__inner .coment {
     display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#section5 .section__inner .coment p {
+    display: inline-block;
+    font-family: 'Gaegu', cursive;
+    font-size: 1.2rem;
+}
+
+#section5 .section__inner .comment-front i {
+    margin-right: 10px;
+}
+
+
+#section5 .section__inner .comment-back i {
+    position: relative;
+    top: -13px;
+    margin-left: 5px;
+}
+
+.comment-front,
+comment-back {
+    display: flex;
     flex-direction: row;
+    position: static;
 }
 
 .about {
@@ -947,7 +995,6 @@ header .main-nav ul li a.active {
     padding: 15px;
     z-index: 10;
 }
-
 
 .about .introduce span {
     font-size: .9rem;
@@ -978,12 +1025,8 @@ header .main-nav ul li a.active {
     width: 130px;
 }
 
-#section5 .section__inner .coment p {
-    font-family: 'Gaegu', cursive;
-    font-size: 2rem;
-}
-
 .footer-bg {
+    min-width: 360px;
     width: 100vw;
     height: 60px;
     background: #f7f7f7;
@@ -991,12 +1034,11 @@ header .main-nav ul li a.active {
 }
 
 .footer__inner {
-    width: 1220px;
     height: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .footer__inner p {

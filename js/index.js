@@ -1,5 +1,4 @@
 const showUps = document.querySelectorAll('.showUp');
-const sectionsContent = document.querySelectorAll('.section__content');
 const nav = document.querySelectorAll('.nav');
 
 //스크롤 active 추가하는 코드가 있어서 중복으로 active가 나타나서
@@ -40,8 +39,10 @@ window.addEventListener('scroll', () => {
                 nav[j + 1].classList.remove('active');
                 break;
             } else {
-                nav[j + 1].classList.add('active');
-                nav[j].classList.remove('active');
+                if (j !== 4) {
+                    nav[j + 1].classList.add('active');
+                    nav[j].classList.remove('active');
+                }
                 break;
             }
         }

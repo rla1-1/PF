@@ -9,6 +9,11 @@ html,
 body {
   width: 100%;
   word-break: keep-all;
+  overflow-x: hidden;
+}
+
+section {
+  min-width: 360px;
 }
 
 body {
