@@ -17,23 +17,93 @@
         margin-bottom: 150px;
     }
 
-    #section3 .clone-box,
-    #section4 .clone-box {
+    #section3,
+    #section4 {
+        height: 680px;
+    }
+
+    #section3 .section__inner,
+    #section4 .section__inner {
+        width: 1220px;
+        padding: 80px 0;
+    }
+
+    .clone-content {
         flex-direction: row;
+        height: 70%;
     }
 
-    .section__title {
-        height: 150px;
+    #section4 .clone-content {
+        flex-direction: row-reverse;
     }
 
-    .clone-link {
+    #section4 .clone-content__title {
+        padding-left: 150px;
+    }
+
+    .clone-content__title {
+        row-gap: 16px;
+        flex: 1;
+    }
+
+    .clone-content__title h2 {
+        font-size: 2.2rem;
+    }
+
+    .clone-content__title p {
+        display: block;
+    }
+
+    .clone-content__image {
         margin-top: 0;
+        flex: 1;
+    }
+
+    .mac-Image {
+        width: 500px;
+        height: 344px;
+    }
+
+    @keyframes spritmac {
+        100% {
+            background-position: -2505px;
+        }
+    }
+
+    .mobile-Image {
+        top: 70px;
+        left: 440px;
+        width: 140px;
+        height: 280px;
+    }
+
+    .clone-list {
+        height: 30%;
+    }
+
+    .clone-list ul {
+        flex-direction: row;
+        column-gap: 30px;
+        width: 0;
+    }
+
+    .clone-list ul li a {
+        row-gap: 0;
+        width: 380px;
+        height: 140px;
+    }
+
+    .clone-list ul li a h3 {
+        font-size: 1.1rem;
+    }
+
+    .clone-list ul li a p {
+        display: block;
     }
 
     #section5 .section__inner .coment p {
         font-size: 1.7rem;
     }
-
 
     .footer__inner {
         flex-direction: row;
@@ -55,57 +125,14 @@
         width: 768px;
     }
 
+    .bg-gradient-b {
+        left: 60%;
+    }
+
     .skills__item-box {
         width: 50%;
         justify-content: space-around;
         column-gap: 0px;
-    }
-
-    .bg-gradient-top {
-        position: absolute;
-        top: 0;
-    }
-
-    #section3 .section__inner,
-    #section4 .section__inner {
-        flex-direction: row;
-    }
-
-    .clone-link {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        row-gap: 20px;
-    }
-
-    #section3 .clone-image .mac {
-        width: 400px;
-        height: 333px;
-    }
-
-    @keyframes spritmac {
-        100% {
-            background-position: -2005px;
-        }
-    }
-
-    #section3 .clone-image .mobile {
-        top: 70px;
-        left: -55px;
-        width: 120px;
-        height: 240px;
-    }
-
-    #section4 .clone-image .mac {
-        width: 400px;
-        height: 333px;
-    }
-
-    #section4 .clone-image .mobile {
-        top: 70px;
-        left: 55px;
-        width: 120px;
-        height: 240px;
     }
 
     #section5 .section__inner .coment p {
@@ -142,12 +169,11 @@
         width: 1220px;
     }
 
-    .bg-gradient-top {
-        position: absolute;
-        top: 0;
+    .bg-gradient-b {
+        left: 40%;
     }
 
-    .bg-gradient-bottom {
+    .bg-gradient-c {
         display: block;
     }
 
